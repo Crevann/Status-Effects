@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://!mods/status_effects/status_manager/StatusManager.gd" type="Script" id=1]
+[ext_resource path="res://obj/BaseObj.tscn" type="PackedScene" id=2]
+
+[node name="StatusManager" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+gravity = "0"
+ground_friction = "0"
+air_friction = "0"
+max_ground_speed = "0"
+max_air_speed = "0"
+max_fall_speed = "0"
+has_projectile_parry_window = false
+
+[node name="StatusEffects" type="Node2D" parent="." index="0"]
+
+[node name="CollisionBox" parent="." index="3"]
+width = 0
+height = 0
+can_draw = false
+
+[node name="Hurtbox" parent="." index="4"]
+width = 0
+height = 0
+can_draw = false
